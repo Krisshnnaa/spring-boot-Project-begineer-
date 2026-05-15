@@ -2,8 +2,13 @@ package com.krishna.application;
 
 import java.util.Objects;
 import java.util.List;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+@Entity
 public class softwareEngineer {
+
+    @Id
     private Integer id;
     private String name;
     private String techStack;

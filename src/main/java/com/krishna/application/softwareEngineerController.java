@@ -9,10 +9,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RequestMapping("api/v1/software-engineer")
 public class softwareEngineerController {
 
+    private softwareEngineerRepo softwareEngineerRepo;
+
+    public softwareEngineerService(com.krishna.application.softwareEngineerRepo softwareEngineerRepo) {
+        this.softwareEngineerRepo = softwareEngineerRepo;
+    }
+
     @GetMapping
     public List<softwareEngineer> getEngineers() {
-        return List.of(
-                new softwareEngineer(1, "Krishna", "JS, Node, React, TailWind"),
-                new softwareEngineer(2, "Manu", "Java, SpringBoot, Bootstrap"));
+        return softwareEngineerService.getSoftwareEngineers();
     }
 }
