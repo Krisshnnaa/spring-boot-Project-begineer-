@@ -1,14 +1,23 @@
 package com.krishna.application;
 
 import java.util.Objects;
+
+import org.yaml.snakeyaml.events.Event.ID;
+
+import java.security.Identity;
 import java.util.List;
+
+import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class softwareEngineer {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private String techStack;

@@ -1,0 +1,15 @@
+###
+GET http://localhost:8080
+
+###
+GET http://localhost:8080/api/v1/software-engineer
+
+
+###
+POST http://localhost:8080/api/v1/software-engineer
+Content-Type: application/json
+
+{
+    "name": "Rachna",
+    "techStack": "python, django"
+}
